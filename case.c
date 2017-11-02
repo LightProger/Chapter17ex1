@@ -25,5 +25,33 @@ int main()
 	printf("4. Написать текстовое сообщение контакту\n");
 	printf("5. Удалить контакт\n");
 	printf("6. Покинуть программу\n");
+
+	do
+	  {
+		printf("Сделайте выбор:\n");
+		scanf(" %d", &choice);
+		switch (choice)
+		{
+			case(1): printf("\nЧтобы добавить контакт");
+			printf(" вам понадобится ввести\n");
+			printf("Фамилию, имя и номер телефона\n");
+			break;
+			case(2): printf("\nПриготовьтесь ввести");
+			printf(" имя контакта,\n");
+			printf("который нужно изменить\n");
+			break;
+			case(3): printf("\nКакой контакт ");
+			printf(" вы хотели бы вызвать?\n");
+			break;
+			case(4): printf("\nКакому контакту ");
+			printf(" вы хотели бы написать?\n");
+			break;
+			case(5): exit(1); //Ранний выход из программы
+			default: printf("\n%d неправильный выбор.\n", choice);
+
+			printf("Попробуйте снова.\n");
+			break;
+		}
+	} while ((choice < 1) || (choice > 5));
 	return 0;
 }
